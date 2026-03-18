@@ -9,11 +9,9 @@ def executar_pipeline():
     extrator = Extract()
     dados = extrator.buscar_universidades(pais_alvo)
 
-    print("Salvando no banco de dados SQLite...")
+    print("Salvando no banco de dados")
     carregador = Load()
     carregador.salvar_no_banco(dados, nome_tabela)
-
-    print("Sucesso! Pipeline finalizado.")
 
 
 if __name__ == "__main__":
